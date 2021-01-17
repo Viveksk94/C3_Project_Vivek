@@ -93,4 +93,17 @@ class RestaurantTest {
                 ()->restaurant.removeFromMenu("French fries"));
     }
     //<<<<<<<<<<<<<<<<<<<<<<<MENU>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+    //>>>>>>>>>>>>>>>>>>>>>>ADMIN: CALCULATE THE ITEM SELECTED<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+    @Test
+    public void select_2_items_should_calculate_the_total_cost_of_2_items(){
+
+        restaurant = new Restaurant("Amelie's cafe","Chennai",openingTime,closingTime);
+        restaurant.addToMenu("Sweet corn soup",100);
+        restaurant.addToMenu("Vegetable lasagne", 260);
+        restaurant.addToMenu("Vegetable soup", 200);
+
+        int TotalCostOfItems = restaurant.calculateItemCost("Sweet corn soup","Vegetable lasagne");
+
+        assertEquals(360,TotalCostOfItems);
+    }
 }
