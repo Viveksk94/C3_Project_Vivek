@@ -105,5 +105,6 @@ class RestaurantTest {
         int TotalCostOfItems = restaurant.calculateItemCost("Sweet corn soup","Vegetable lasagne");
 
         assertEquals(360,TotalCostOfItems);
+
     }
 }
